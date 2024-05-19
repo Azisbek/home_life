@@ -1,0 +1,15 @@
+export const ROUTER_NAMES = {
+  HOME: "/",
+  ARTICLE: "/article",
+  NEWS: "/news",
+  ABOUT: "/about",
+  EVENTS: "/events",
+  MEDIA: "/media",
+  PROJECTS: "/projects",
+  COOPERATION: "/cooperation",
+  BOOKS: "/books",
+  RUBRICS: "/rubrics",
+  DEBATING_CLUB: "/projects/debating_club",
+  COURSES: "/projects/courses",
+  SEARCH: "/search",
+};
