@@ -1,7 +1,5 @@
-import React from "react";
+import React from 'react'
 
-const BannerHome = () => {
-  return <div>BannerHome</div>;
-};
-
-export default BannerHome;
+export const BannerHome = () => {
+	return <div>BannerHome</div>
+}

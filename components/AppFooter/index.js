@@ -1,2 +1,2 @@
-import AppFooter from "./components/AppFooter";
-export { AppFooter };
+import AppFooter from './components/AppFooter'
+export { AppFooter }
