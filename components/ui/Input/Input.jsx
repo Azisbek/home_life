@@ -11,7 +11,7 @@ import classes from "./Input.module.css";
 const CustomInput = ({ type, placeholder, image, widthImage }) => {
   return (
     <Stack>
-      <InputGroup size='md'>
+      <InputGroup>
         <Input
           className={classes.inputStyle}
           type={type}

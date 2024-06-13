@@ -2,11 +2,11 @@ import React from "react";
 import ProductItem from "../../../../../components/ProductItem/ProductItem";
 import classes from "./HomePopularProduct.module.css";
 
-const HomePopularProduct = ({ array }) => {
+const HomePopularProduct = ({ mainData }) => {
   return (
     <div className={classes.containerProduct}>
-      {array.map((el) => {
-        return <ProductItem />;
+      {mainData.map((el) => {
+        return <ProductItem data={el} />;
       })}
     </div>
   );

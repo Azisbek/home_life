@@ -10,20 +10,6 @@ const AppLayout = ({ children }) => {
   const { hideSidebar } = sidebarStore;
   const { isMobile } = devicesStore;
 
-  const router = useRouter();
-
-  useEffect(() => {
-    const handleRouteChange = () => {
-      hideSidebar();
-    };
-
-    router.events.on("routeChangeStart", handleRouteChange);
-
-    return () => {
-      router.events.off("routeChangeStart", handleRouteChange);
-    };
-  }, [router, hideSidebar]);
-
   return (
     <>
       <div>{isMobile ? <h1>Mobile</h1> : <AppHeader />}</div>
