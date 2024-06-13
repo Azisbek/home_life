@@ -1,0 +1,12 @@
+.containerHomeProduct {
+  padding-bottom: 90px;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.containerHomeProduct h3 {
+  font-size: 36px;
+  font-weight: 800;
+  line-height: 44px;
+}

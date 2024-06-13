@@ -1,0 +1,8 @@
+.containerNavigate {
+  display: flex;
+  list-style: none;
+  gap: 40px;
+}
+
+.containerNavigate li {
+}
