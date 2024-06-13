@@ -1,6 +1,11 @@
 .containerProduct {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  row-gap: 30px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(291px, 1fr));
+  gap: 19px;
+}
+
+@media (max-width: 768px) {
+  .containerProduct {
+    justify-items: center;
+  }
 }
