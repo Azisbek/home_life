@@ -4,11 +4,9 @@ import { InputGroup, InputRightElement, Input, Stack } from "@chakra-ui/react";
 
 import Image from "next/image";
 
-import search from "../../../assets/search.png";
-
 import classes from "./Input.module.css";
 
-const CustomInput = ({ type, placeholder, image, widthImage }) => {
+const CustomInput = ({ type, placeholder, image, widthImage, clickIcon }) => {
   return (
     <Stack>
       <InputGroup>
@@ -21,7 +19,11 @@ const CustomInput = ({ type, placeholder, image, widthImage }) => {
           top='50%'
           left='90%'
           transform='translateY(-50%)'
-          children={image && <Image src={search} width={widthImage} />}
+          children={
+            image && (
+              <Image onClick={clickIcon} src={image} width={widthImage} />
+            )
+          }
         />
       </InputGroup>
     </Stack>

@@ -1,5 +1,7 @@
 import React from "react";
+
 import ProductItem from "../../../../../components/ProductItem/ProductItem";
+
 import classes from "./HomePopularProduct.module.css";
 
 const HomePopularProduct = ({ mainData }) => {

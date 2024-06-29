@@ -2,7 +2,9 @@
 
 .blockCart {
   position: relative;
+
   padding: "20px";
+
   color: "#000000";
   background: "#efefef";
   border-radius: 10px;
@@ -16,22 +18,24 @@
 }
 
 .blockCart {
-  width: 291px;
-  height: 564px;
-  padding: 30px 23px;
-  border: 0.5px solid rgb(210, 210, 209);
   display: flex;
   flex-direction: column;
-  /* gap: 30px; */
   justify-content: space-between;
+
+  width: 291px;
+  height: 564px;
+
+  padding: 30px 23px;
+
+  border: 0.5px solid rgb(210, 210, 209);
 }
 
 .contentProductCart {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+
   min-height: 183px;
-  /* background-color: red; */
 }
 
 .blockPrice {
@@ -52,6 +56,8 @@
   line-height: 22px;
 }
 
-.img {
-  /* width={245} height={255}  */
+.starTitleContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
 }

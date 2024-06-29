@@ -1,6 +1,8 @@
 import React from "react";
-import s from "./styled.module.css";
+
 import clsx from "clsx";
+
+import s from "./styled.module.css";
 
 export const SwiperBullet = ({ num, count }) => {
   const bullet = [];

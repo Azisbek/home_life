@@ -1,16 +1,19 @@
-// Ваш файл AppHeader.js или любой другой компонент
-import React, { useState } from "react";
-import Image from "next/image";
-import logo from "../../assets/Logo.png";
-import AppNavigateHeader from "./components/AppNavigateHeader";
-import CustomInput from "../ui/Input/Input";
-import AppProfileHeader from "./components/AppProfileHeader";
-import Search from "../../assets/search.png";
-import classes from "./AppHeader.module.css";
-import { useDisclosure } from "@chakra-ui/react";
-import CustomModal from "../ui/Modal/components/CustomModal";
+import React from "react";
 import clsx from "clsx";
+import { useDisclosure } from "@chakra-ui/react";
+import Image from "next/image";
+
+import logo from "../../assets/Logo.png";
+import Search from "../../assets/search.png";
+
+import AppNavigateHeader from "./components/AppNavigateHeader";
+import AppProfileHeader from "./components/AppProfileHeader";
 import Sign_up from "../Sign_up/components/Sign_up";
+
+import CustomInput from "../ui/Input/Input";
+import CustomModal from "../ui/Modal/components/CustomModal";
+
+import classes from "./AppHeader.module.css";
 
 const AppHeader = () => {
   const { isOpen, onOpen, onClose } = useDisclosure();
@@ -19,12 +22,12 @@ const AppHeader = () => {
     <>
       <header className={clsx("container", classes.containerHeader)}>
         <div>
-          <Image src={logo} alt="logo" width={182} />
+          <Image src={logo} alt='logo' width={182} />
         </div>
         <div>
           <CustomInput
-            type="text"
-            placeholder="Поиск"
+            type='text'
+            placeholder='Поиск'
             image={Search}
             widthImage={18}
           />
@@ -37,9 +40,11 @@ const AppHeader = () => {
           <AppProfileHeader />
         </div>
       </header>
-      {isOpen && <CustomModal isOpen={isOpen}><Sign_up onClose={onClose} /></CustomModal>}
-
-
+      {isOpen && (
+        <CustomModal isOpen={isOpen}>
+          <Sign_up onClose={onClose} />
+        </CustomModal>
+      )}
     </>
   );
 };

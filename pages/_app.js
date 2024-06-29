@@ -1,7 +1,9 @@
 import { useEffect } from "react";
-import "../styles/globals.css";
 import { store } from "../store";
+
 import AppLayout from "../components/AppLayout/components/AppLayout";
+
+import "../styles/globals.css";
 
 const MOBILE_WIDTH = 768;
 

@@ -1,0 +1,19 @@
+.select {
+  width: 208px;
+  border: 0.5px solid black;
+  color: rgb(119, 119, 118);
+  border-radius: 10px;
+}
+
+.select:active,
+.select:hover {
+  outline: none;
+}
+
+.select * {
+  color: rgb(119, 119, 118);
+}
+
+.select option[default] {
+  display: none;
+}

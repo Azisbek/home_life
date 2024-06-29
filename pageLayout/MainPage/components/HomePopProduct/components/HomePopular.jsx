@@ -1,5 +1,7 @@
 import React from "react";
+
 import HomePopularProduct from "./HomePopularProduct";
+
 import classes from "./HomePopular.module.css";
 
 const HomePopular = ({ mainData }) => {
