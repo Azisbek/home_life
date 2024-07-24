@@ -1,7 +1,7 @@
 export const ProductList = [
   {
     title: "Пылесос Samsung",
-    rating: 3,
+    rating: 3.5,
     price: 30100,
   },
   {

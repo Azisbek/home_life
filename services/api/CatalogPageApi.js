@@ -1,7 +1,7 @@
 import { serverApi } from "./client";
 
-export const MainPageApi = {
-  getMainPage() {
+export const CatalogPageApi = {
+  getCatalogPage() {
     return serverApi.get("product/list/", {
       headers: {
         "Content-Type": "application/json",

@@ -15,16 +15,11 @@ const CustomInput = ({ type, placeholder, image, widthImage, clickIcon }) => {
           type={type}
           placeholder={placeholder}
         />
-        <InputRightElement
-          top='50%'
-          left='90%'
-          transform='translateY(-50%)'
-          children={
-            image && (
-              <Image onClick={clickIcon} src={image} width={widthImage} />
-            )
-          }
-        />
+        <InputRightElement top='50%' left='90%' transform='translateY(-50%)'>
+          {image && (
+            <Image onClick={clickIcon} src={image} width={widthImage} />
+          )}
+        </InputRightElement>
       </InputGroup>
     </Stack>
   );

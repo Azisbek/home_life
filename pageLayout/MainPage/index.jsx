@@ -14,7 +14,7 @@ const HomePage = ({ mainData }) => {
       <HomeSelected />
       <HomeNewProduct mainData={mainData} />
       <HomePopular mainData={ProductList} />
-      {/* <HomePromotion mainData={mainData} /> */}
+      <HomePromotion mainData={mainData} />
       <HomeAbout />
     </>
   );

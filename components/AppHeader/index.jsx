@@ -19,7 +19,7 @@ const AppHeader = () => {
   const { isOpen, onOpen, onClose } = useDisclosure();
 
   return (
-    <>
+    <React.Fragment>
       <header className={clsx("container", classes.containerHeader)}>
         <div>
           <Image src={logo} alt='logo' width={182} />
@@ -45,7 +45,7 @@ const AppHeader = () => {
           <Sign_up onClose={onClose} />
         </CustomModal>
       )}
-    </>
+    </React.Fragment>
   );
 };
 

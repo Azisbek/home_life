@@ -11,12 +11,12 @@
 }
 
 .adressContainer {
-  padding-top: 50px;
-
+  margin-top: 50px;
   display: flex;
   flex-direction: column;
   gap: 20px;
 }
+
 .numberBlock {
   display: flex;
   flex-direction: column;
@@ -52,4 +52,14 @@
 .icon {
   width: 14.24px;
   height: 12.16px;
+}
+
+@media only screen and (max-width: 768px) {
+  .footer h3 {
+    font-size: 24px;
+  }
+
+  .adressContainer {
+    margin-top: 20px;
+  }
 }

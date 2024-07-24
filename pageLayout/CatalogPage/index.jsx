@@ -1,7 +1,13 @@
 import React from "react";
 
-const index = () => {
-  return <div>index</div>;
+const CatalogPage = ({ data }) => {
+  return (
+    <div>
+      {data.map((el) => {
+        return <p key={el.title}>{el.title}</p>;
+      })}
+    </div>
+  );
 };
 
-export default index;
+export default CatalogPage;

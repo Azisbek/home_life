@@ -1,15 +1,14 @@
-import React from 'react'
-import HomeProductNewList from './HomeProductNewList'
-import classes from './HomeNewProduct.module.css'
+import React from "react";
+import HomeProductNewList from "./HomeProductNewList";
+import classes from "./HomeNewProduct.module.css";
 
 const HomeNewProduct = ({ mainData }) => {
-	const array = [1, 2, 3, 4]
-	return (
-		<section className={classes.containerHomeProduct}>
-			<h3>Новинки</h3>
-			<HomeProductNewList mainData={array} />
-		</section>
-	)
-}
+  return (
+    <section className={classes.containerHomeProduct}>
+      <h3>Новинки</h3>
+      <HomeProductNewList mainData={mainData} />
+    </section>
+  );
+};
 
-export default HomeNewProduct
+export default HomeNewProduct;

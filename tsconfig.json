@@ -1,0 +1,27 @@
+{
+  "compilerOptions": {
+    "lib": ["dom", "dom.iterable", "esnext"],
+    "allowJs": true,
+    "skipLibCheck": true,
+    "strict": false,
+    "noEmit": true,
+    "incremental": true,
+    "module": "esnext",
+    "esModuleInterop": true,
+    "moduleResolution": "node",
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "jsx": "preserve"
+  },
+  "include": [
+    "next-env.d.ts",
+    "**/*.ts",
+    "**/*.tsx",
+    "pages/catalog/index.js",
+    "pageLayout/CatalogPage/components/CatalogProducts/index.js",
+    "pageLayout/CatalogPage/index.jsx",
+    "components/NavigateBar/components/icon/CatalogIcon.jsx",
+    "components/NavigateBar/components/icon/HomeIcon.jsx"
+, "components/MobileHeader/index.js"  ],
+  "exclude": ["node_modules"]
+}

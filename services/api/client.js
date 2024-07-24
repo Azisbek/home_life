@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const baseURL = "https://jsonplaceholder.typicode.com/";
+const baseURL = "https://homelife-tcer.onrender.com/";
 
 export const clientApi = axios.create({
   baseURL: "/api/",

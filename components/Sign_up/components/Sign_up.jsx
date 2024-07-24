@@ -5,9 +5,9 @@ import CustomInput from "../../ui/Input/Input";
 import AppButton from "../../ui/Button/AppButton";
 import Select from "../../ui/Select/Select";
 
-import OpenEye from "../../../assets/eye-open.svg";
-import CloseEye from "../../../assets/close.svg";
-import GoogleIcon from "../../../assets/google_icon.svg";
+import OpenEye from "../../../assets/icon/eye-open.svg";
+import CloseEye from "../../../assets/icon/close.svg";
+import GoogleIcon from "../../../assets/icon/google_icon.svg";
 
 import s from "./styled.module.css";
 

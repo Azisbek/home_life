@@ -5,19 +5,23 @@ import { AppFooter } from "../../AppFooter";
 import AppHeader from "../../AppHeader";
 
 import { store } from "../../../store";
+import { NavigateBar } from "../../NavigateBar";
+import { MobileHeader } from "../../MobileHeader";
 
 const AppLayout = ({ children }) => {
   const { devicesStore } = store;
   const { isMobile } = devicesStore;
 
   return (
-    <>
-      <>{isMobile ? <h1>Mobile header</h1> : <AppHeader />}</>
+    <React.Fragment>
+      {isMobile ? <MobileHeader /> : <AppHeader />}
 
       <main className='container'>{children}</main>
 
       <AppFooter />
-    </>
+
+      {isMobile && <NavigateBar />}
+    </React.Fragment>
   );
 };
 
