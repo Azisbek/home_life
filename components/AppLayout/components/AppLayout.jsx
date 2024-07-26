@@ -15,11 +15,8 @@ const AppLayout = ({ children }) => {
   return (
     <React.Fragment>
       {isMobile ? <MobileHeader /> : <AppHeader />}
-
       <main className='container'>{children}</main>
-
       <AppFooter />
-
       {isMobile && <NavigateBar />}
     </React.Fragment>
   );

@@ -11,7 +11,13 @@
     "moduleResolution": "node",
     "resolveJsonModule": true,
     "isolatedModules": true,
-    "jsx": "preserve"
+    "jsx": "preserve",
+    "baseUrl": "./",
+    "paths": {
+      "@components/*": ["components/*"],
+      "@utils/*": ["utils/*"],
+      "@pageLayout/*": ["pageLayout/*"]
+    }
   },
   "include": [
     "next-env.d.ts",
@@ -21,7 +27,8 @@
     "pageLayout/CatalogPage/components/CatalogProducts/index.js",
     "pageLayout/CatalogPage/index.jsx",
     "components/NavigateBar/components/icon/CatalogIcon.jsx",
-    "components/NavigateBar/components/icon/HomeIcon.jsx"
-, "components/MobileHeader/index.js"  ],
+    "components/NavigateBar/components/icon/HomeIcon.jsx",
+    "components/MobileHeader/index.js"
+, "components/BurgetMenu/index.js"  ],
   "exclude": ["node_modules"]
 }

@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import Image from "next/image";
 
-import CustomInput from "../../ui/Input/Input";
+import { CustomInput } from "../../ui/Input/Input";
 import AppButton from "../../ui/Button/AppButton";
 import Select from "../../ui/Select/Select";
 

@@ -6,7 +6,13 @@ import Image from "next/image";
 
 import classes from "./Input.module.css";
 
-const CustomInput = ({ type, placeholder, image, widthImage, clickIcon }) => {
+export const CustomInput = ({
+  type,
+  placeholder,
+  image,
+  widthImage,
+  clickIcon,
+}) => {
   return (
     <Stack>
       <InputGroup>
@@ -24,5 +30,3 @@ const CustomInput = ({ type, placeholder, image, widthImage, clickIcon }) => {
     </Stack>
   );
 };
-
-export default CustomInput;

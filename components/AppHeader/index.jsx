@@ -10,7 +10,7 @@ import AppNavigateHeader from "./components/AppNavigateHeader";
 import AppProfileHeader from "./components/AppProfileHeader";
 import Sign_up from "../Sign_up/components/Sign_up";
 
-import CustomInput from "../ui/Input/Input";
+import { CustomInput } from "../ui/Input/Input";
 import CustomModal from "../ui/Modal/components/CustomModal";
 
 import classes from "./AppHeader.module.css";
@@ -40,11 +40,10 @@ const AppHeader = () => {
           <AppProfileHeader />
         </div>
       </header>
-      {isOpen && (
-        <CustomModal isOpen={isOpen}>
-          <Sign_up onClose={onClose} />
-        </CustomModal>
-      )}
+
+      <CustomModal isOpen={isOpen} onClose={onClose}>
+        <Sign_up onClose={onClose} />
+      </CustomModal>
     </React.Fragment>
   );
 };

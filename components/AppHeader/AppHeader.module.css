@@ -8,3 +8,7 @@
   padding-top: 20px;
   padding-bottom: 50px;
 }
+
+.input {
+  max-width: 435px;
+}

@@ -6,15 +6,15 @@ import { ROUTER_NAMES } from "../../../../router/routerNames";
 import { usePathname } from "next/navigation";
 import s from "../NavigateBar.module.css";
 
-export const CardLink = () => {
+export const BasketLink = () => {
   const pathName = usePathname();
   return (
     <Link
-      className={clsx(s.link, pathName === ROUTER_NAMES.CARD && s.active)}
-      href={ROUTER_NAMES.CARD}
+      className={clsx(s.link, pathName === ROUTER_NAMES.BASKET && s.active)}
+      href={ROUTER_NAMES.BASKET}
     >
       <CardIcon
-        color={pathName === ROUTER_NAMES.CARD ? "#2241FC" : "black"}
+        color={pathName === ROUTER_NAMES.BASKET ? "#2241FC" : "black"}
         size={20}
       />
       Каталог
