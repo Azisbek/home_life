@@ -17,7 +17,7 @@ const CustomModal = ({ onClose, contentClass, children, isOpen }) => {
 
   return (
     <div
-      onClick={() => onClose()}
+      onClick={() => onClose}
       className={clsx(isOpen ? s.container : s.closeContainer)}
     >
       <div className={s.overlay} onClick={onClose}></div>

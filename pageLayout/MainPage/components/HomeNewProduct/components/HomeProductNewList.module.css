@@ -1,4 +1,11 @@
 .containerProduct {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  /* grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); */
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.containerProduct div {
+  /* width: calc(100% / 3 - 16px); */
 }

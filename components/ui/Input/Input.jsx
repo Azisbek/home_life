@@ -12,6 +12,8 @@ export const CustomInput = ({
   image,
   widthImage,
   clickIcon,
+  value,
+  props,
 }) => {
   return (
     <Stack>
@@ -20,6 +22,8 @@ export const CustomInput = ({
           className={classes.inputStyle}
           type={type}
           placeholder={placeholder}
+          {...props}
+          value={value}
         />
         <InputRightElement top='50%' left='90%' transform='translateY(-50%)'>
           {image && (
