@@ -1,7 +1,8 @@
 import React from "react";
-import { ProductList } from "./components/ProductList/ProductList"
+import { ProductList } from "./components/ProductList/ProductList";
 
 const CatalogPage = ({ data }) => {
+  console.log(data);
   return (
     <>
       <ProductList />

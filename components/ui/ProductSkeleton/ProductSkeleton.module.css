@@ -1,0 +1,38 @@
+.skeleton {
+  width: 291px;
+  height: 564px;
+  padding: 30px 23px;
+  display: grid;
+  grid-template-rows: 450px auto;
+  gap: 10px;
+}
+
+.containerBlock {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.skeleton1 {
+  background-color: rgb(153, 153, 153);
+  height: 255px;
+  border-radius: 5px;
+}
+
+.title {
+  width: 195px;
+  background-color: rgb(153, 153, 153);
+  height: 25px;
+}
+
+.rating {
+  width: 150px;
+  background-color: rgb(153, 153, 153);
+  height: 25px;
+}
+
+.skeleton2 {
+  height: 39px;
+  background-color: rgb(153, 153, 153);
+  border-radius: 5px;
+}

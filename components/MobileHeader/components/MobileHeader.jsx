@@ -3,7 +3,6 @@ import clsx from "clsx";
 import { BurgerMenu } from "@components/BurgetMenu";
 import logo from "../../../assets/Logo.png";
 import Search from "../../../assets/search.png";
-import { CustomInput } from "../../ui/Input/Input";
 
 import s from "./MobileHeader.module.css";
 

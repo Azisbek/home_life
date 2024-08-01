@@ -3,7 +3,7 @@ import clsx from "clsx";
 
 import s from "./Modal.module.css";
 
-const CustomModal = ({ onClose, contentClass, children, isOpen }) => {
+export const CustomModal = ({ onClose, contentClass, children, isOpen }) => {
   useEffect(() => {
     if (isOpen) {
       document.body.style.overflow = "hidden";
@@ -25,5 +25,3 @@ const CustomModal = ({ onClose, contentClass, children, isOpen }) => {
     </div>
   );
 };
-
-export default CustomModal;

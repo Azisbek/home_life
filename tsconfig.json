@@ -29,6 +29,6 @@
     "components/NavigateBar/components/icon/CatalogIcon.jsx",
     "components/NavigateBar/components/icon/HomeIcon.jsx",
     "components/MobileHeader/index.js"
-, "components/BurgetMenu/index.js"  ],
+, "components/BurgetMenu/index.js", "components/ui/Skeleton/index.jsx", "utils/generateProductSkeleton.js"  ],
   "exclude": ["node_modules"]
 }

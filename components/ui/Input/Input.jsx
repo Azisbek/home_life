@@ -1,36 +1,38 @@
-import React from "react";
+import { clsx } from "clsx";
 
-import { InputGroup, InputRightElement, Input, Stack } from "@chakra-ui/react";
+import s from "./Input.module.css";
 
-import Image from "next/image";
+export const Input = ({
+  isError,
+  className,
+  leftIcon,
+  rightIcon,
+  leftOnClick,
+  rightOnClick,
+  ...props
+}) => (
+  <div className={clsx(s.container)}>
+    {leftIcon && (
+      <span className={s.leftIcon} onClick={leftOnClick}>
+        {leftIcon}
+      </span>
+    )}
 
-import classes from "./Input.module.css";
+    <input
+      className={clsx(
+        s.input,
+        leftIcon && s.leftMargin,
+        rightIcon && s.rightMargin,
+        isError && s.error,
+        className
+      )}
+      {...props}
+    />
 
-export const CustomInput = ({
-  type,
-  placeholder,
-  image,
-  widthImage,
-  clickIcon,
-  value,
-  props,
-}) => {
-  return (
-    <Stack>
-      <InputGroup>
-        <Input
-          className={classes.inputStyle}
-          type={type}
-          placeholder={placeholder}
-          {...props}
-          value={value}
-        />
-        <InputRightElement top='50%' left='90%' transform='translateY(-50%)'>
-          {image && (
-            <Image onClick={clickIcon} src={image} width={widthImage} />
-          )}
-        </InputRightElement>
-      </InputGroup>
-    </Stack>
-  );
-};
+    {rightIcon && (
+      <span className={s.rightIcon} onClick={rightOnClick}>
+        {rightIcon}
+      </span>
+    )}
+  </div>
+);

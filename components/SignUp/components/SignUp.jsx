@@ -1,16 +1,20 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import Image from "next/image";
-import { CustomInput } from "../../ui/Input/Input";
-import AppButton from "../../ui/Button/AppButton";
-import OpenEye from "../../../assets/icon/eye-open.svg";
-import CloseEye from "../../../assets/icon/close.svg";
+import { AppButton } from "../../ui/Button/AppButton";
+import { CloseEye } from "../../../assets/icon/close.svg";
+import { OpenEye } from "../../../assets/icon/eye-open.svg";
 import GoogleIcon from "../../../assets/icon/google_icon.svg";
+import { useUserApi } from "../../../hook/useUserApi";
+import { Input } from "../../ui/Input/Input";
+
 import s from "./styled.module.css";
-import { Registration } from "../server/sign-up";
 
 const SignUp = ({ onClose }) => {
   const [show, setShow] = useState(false);
   const [showConfirm, setShowConfirm] = useState(false);
+
+  const { user, error, signUp, setError } = useUserApi();
+
   const [form, setForm] = useState({
     first_name: "",
     last_name: "",
@@ -54,84 +58,72 @@ const SignUp = ({ onClose }) => {
       password: form.password,
     };
 
-    try {
-      const response = await Registration.signUp(data);
-      const { user } = response.data;
-      localStorage.setItem("access", user.access);
-      localStorage.setItem("refresh", user.refresh);
-      console.log("User data:", user);
-    } catch (error) {
-      return error;
-    }
+    await signUp(data);
   };
 
   return (
-    <section className={s.container}>
+    <div className={s.container}>
+      {error && <p>{error}</p>}
       <div className={s.blockTitle}>
         <h2>Зарегистрироваться</h2>
         <p>У вас уже есть учетная запись? Войти</p>
       </div>
 
       <form className={s.formContainer} onSubmit={handleSubmit}>
-        <input
+        <Input
           name='first_name'
           value={form.first_name}
           onChange={handleInputChange}
           placeholder='Имя*'
         />
 
-        <input
+        <Input
           name='last_name'
-          // value={form.last_name}
+          value={form.last_name}
           onChange={handleInputChange}
           placeholder='Фамилия*'
         />
 
-        <input
+        <Input
           name='email'
-          // value={form.email}
+          value={form.email}
           onChange={handleInputChange}
           placeholder='Электронная почта*'
         />
 
-        <input
+        <Input
           name='username'
           value={form.username}
           onChange={handleInputChange}
           placeholder='Имя пользователя*'
         />
 
-        <input
+        <Input
           name='number'
           value={form.number}
           onChange={handleInputChange}
           placeholder='Номер телефона'
         />
 
-        <input
+        <Input
           name='password'
           type={show ? "text" : "password"}
           value={form.password}
           onChange={handleInputChange}
           placeholder='Введите пароль*'
-          image={show ? CloseEye : OpenEye}
-          clickIcon={clickOpenEyeHandler}
+          rightIcon={show ? CloseEye : OpenEye}
+          rightOnClick={clickOpenEyeHandler}
         />
 
-        <input
+        <Input
           name='confirmPassword'
           type={showConfirm ? "text" : "password"}
           value={form.confirmPassword}
           onChange={handleInputChange}
           placeholder='Подтвердите пароль*'
-          image={showConfirm ? CloseEye : OpenEye}
-          clickIcon={clickOpenEyeConfirmHandler}
+          rightIcon={showConfirm ? CloseEye : OpenEye}
+          rightOnClick={clickOpenEyeConfirmHandler}
         />
-
-        <div className={s.blockInput}>
-          {/* <Select /> */}
-          {/* <CustomInput placeholder="Возраст" /> */}
-        </div>
 
         <AppButton className={s.googleBtn} variant='whiteBtn' onClick={onClose}>
           <Image src={GoogleIcon} alt='googleIcon' /> Войти с помощью Google
@@ -145,7 +137,7 @@ const SignUp = ({ onClose }) => {
           Назад
         </AppButton>
       </form>
-    </section>
+    </div>
   );
 };
 

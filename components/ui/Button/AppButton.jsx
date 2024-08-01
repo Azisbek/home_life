@@ -3,7 +3,7 @@ import clsx from "clsx";
 
 import classes from "./AppButton.module.css";
 
-const AppButton = ({
+export const AppButton = ({
   type,
   children,
   onClick,
@@ -22,5 +22,3 @@ const AppButton = ({
     </button>
   );
 };
-
-export default AppButton;

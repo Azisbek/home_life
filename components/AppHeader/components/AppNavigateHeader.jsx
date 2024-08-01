@@ -1,7 +1,7 @@
 import React from "react";
 import classes from "./AppNavigateHeader.module.css";
 
-const AppNavigateHeader = () => {
+export const AppNavigateHeader = () => {
   return (
     <ul className={classes.containerNavigate}>
       <li>Главная </li>
@@ -11,5 +11,3 @@ const AppNavigateHeader = () => {
     </ul>
   );
 };
-
-export default AppNavigateHeader;
