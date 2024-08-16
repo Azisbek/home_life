@@ -1,6 +1,6 @@
 import React from "react";
-import s from "./BlockCustomer.module.css";
 import { Rating } from "react-simple-star-rating";
+import s from "./BlockCustomer.module.css";
 
 export const BlockCustomer = ({ name, date, rating, comment }) => {
   return (

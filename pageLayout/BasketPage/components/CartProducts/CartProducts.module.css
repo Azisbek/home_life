@@ -1,0 +1,15 @@
+.title {
+  font-weight: 600;
+  font-size: 28px;
+  line-height: 34px;
+  margin-bottom: 30px;
+}
+
+.containerList {
+  margin-bottom: 90px;
+}
+
+.containerBlock {
+  display: flex;
+  justify-content: space-between;
+}

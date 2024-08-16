@@ -1,12 +1,12 @@
 import React from "react";
+import { ProductList } from "./components/ProductList/ProductList";
 
 const CatalogPage = ({ data }) => {
+  console.log(data);
   return (
-    <div>
-      {data?.map((el) => {
-        return <p key={el.title}>{el.title}</p>;
-      })}
-    </div>
+    <>
+      <ProductList />
+    </>
   );
 };
 

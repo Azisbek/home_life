@@ -1,0 +1,28 @@
+.containerProduct {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(291px, 1fr));
+  gap: 19px;
+  margin-bottom: 90px;
+  justify-content: center;
+}
+
+@media (max-width: 1024px) {
+  .containerProduct {
+    grid-template-columns: repeat(auto-fit, 291px);
+    justify-content: center;
+  }
+}
+
+@media (max-width: 768px) {
+  .containerProduct {
+    grid-template-columns: repeat(auto-fit, 291px);
+    justify-items: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .containerProduct {
+    grid-template-columns: repeat(auto-fit, 291px);
+    justify-items: center;
+  }
+}

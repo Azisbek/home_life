@@ -2,7 +2,7 @@ import React from "react";
 import { observer } from "mobx-react-lite";
 
 import { AppFooter } from "../../AppFooter";
-import AppHeader from "../../AppHeader";
+import { AppHeader } from "../../AppHeader";
 
 import { store } from "../../../store";
 import { NavigateBar } from "../../NavigateBar";
@@ -15,11 +15,8 @@ const AppLayout = ({ children }) => {
   return (
     <React.Fragment>
       {isMobile ? <MobileHeader /> : <AppHeader />}
-
       <main className='container'>{children}</main>
-
       <AppFooter />
-
       {isMobile && <NavigateBar />}
     </React.Fragment>
   );

@@ -3,6 +3,6 @@ export const ROUTER_NAMES = {
   CATALOG: "/catalog",
   FAVORITES: "/favorites",
   PERSONAL_AREA: "/personal-area",
-  CARD: "/card",
+  BASKET: "/basket",
   PRODUCT: "/product",
 };

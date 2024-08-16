@@ -1,5 +1,6 @@
-export const ProductList = [
+export const productList = [
   {
+    id:"3",
     title: "Пылесос Samsung",
     rating: 3.5,
     price: 30100,

@@ -1,7 +1,7 @@
 .aboutProduct {
   display: flex;
   flex-wrap: wrap;
-  /* gap: 94px; */
+  column-gap: 94px;
 }
 .container h3{
 color: rgb(29, 29, 26);

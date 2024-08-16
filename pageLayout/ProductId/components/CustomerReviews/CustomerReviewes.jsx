@@ -8,7 +8,7 @@ export const CustomerReviewes = ({ array }) => {
         <h2 className={s.title}>Отзывы покупателей</h2>
         <button className={s.button}>Написать отзыв</button>
       </div>
-        {array.map((el, index) => {
+        {array?.map((el, index) => {
           return (
             <BlockCustomer
               key={`${el} ${index}`}

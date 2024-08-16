@@ -4,7 +4,7 @@ import { Rating } from "react-simple-star-rating";
 import Image from "next/image";
 
 import { SwiperBullet } from "../ui/Swiper_bullet";
-import AppButton from "../ui/Button/AppButton";
+import { AppButton } from "../ui/Button/AppButton";
 
 import ProductImg from "../../assets/product_img.png";
 

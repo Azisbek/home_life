@@ -1,10 +1,10 @@
 import React from "react";
 import Cleaner from "../../../../assets/cleaner.png";
 import Image from "next/image";
-import s from "./ViewProduct.module.css";
-import AppButton from "../../../../components/ui/Button/AppButton";
+import {AppButton} from "../../../../components/ui/Button/AppButton";
 import { Rating } from "react-simple-star-rating";
 import { ProductAdder } from "../ProductAdder/ProductAdder";
+import s from "./ViewProduct.module.css";
 
 export const ViewProduct = ({ rating }) => {
   return (
