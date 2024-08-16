@@ -5,9 +5,9 @@ import classes from "./HomeProductNewList.module.css";
 const HomeProductNewList = ({ mainData }) => {
   return (
     <div className={classes.containerProduct}>
-      {mainData?.map((el, index) => {
+      {/* {mainData.map((el, index) => {
         return <ProductItem data={el} key={index} />;
-      })}
+      })} */}
     </div>
   );
 };
