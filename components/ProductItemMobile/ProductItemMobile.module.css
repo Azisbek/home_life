@@ -1,0 +1,50 @@
+@import "react-slideshow-image/dist/styles.css";
+
+.blockCart {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 100%;
+
+  padding: 14px 8px;
+
+  border: 0.5px solid rgb(210, 210, 209);
+
+  border-radius: 10px;
+}
+
+.blockImg {
+  display: flex;
+  justify-content: center;
+}
+
+.contentProductCart {
+  display: flex;
+  flex-direction: column;
+}
+
+.title {
+  color: rgb(29, 29, 26);
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 15px;
+}
+
+.price {
+  color: rgb(29, 29, 26);
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 17px;
+}
+
+.information {
+  padding-bottom: 10px;
+}
+
+.starTitleContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 12px;
+  padding-bottom: 8px;
+}

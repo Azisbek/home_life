@@ -6,7 +6,15 @@
   justify-content: center;
 }
 
-@media (max-width: 1024px) {
+.containerProductMobile {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(174px, 1fr));
+  gap: 10px;
+  margin-bottom: 90px;
+  justify-content: center;
+}
+
+@media (max-width: 1300px) {
   .containerProduct {
     grid-template-columns: repeat(auto-fit, 291px);
     justify-content: center;
@@ -21,8 +29,10 @@
 }
 
 @media (max-width: 480px) {
-  .containerProduct {
-    grid-template-columns: repeat(auto-fit, 291px);
+  .containerProductMobile {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
     justify-items: center;
+    gap: 2px;
   }
 }

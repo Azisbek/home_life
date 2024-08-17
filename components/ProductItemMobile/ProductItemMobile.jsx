@@ -8,10 +8,10 @@ import { AppButton } from "../ui/Button/AppButton";
 
 import ProductImg from "../../assets/product_img.png";
 
-import s from "./ProductItem.module.css";
+import s from "./ProductItemMobile.module.css";
 import { ROUTER_NAMES } from "../../router/routerNames";
 
-const ProductItem = ({ data }) => {
+export const ProductItemMobile = ({ data }) => {
   const { title, rating, price, id } = data;
 
   const router = useRouter();
@@ -23,13 +23,13 @@ const ProductItem = ({ data }) => {
   return (
     <div className={s.blockCart}>
       <div className={s.blockImg}>
-        <Image src={ProductImg} width={245} height={255} />
+        <Image src={ProductImg} width={158} height={164} />
       </div>
       <SwiperBullet count={3} num={1} />
       <div className={s.contentProductCart}>
         <div className={s.starTitleContainer}>
           <Rating
-            size={24}
+            size={20}
             initialValue={rating}
             allowFraction={true}
             readonly={true}
@@ -48,5 +48,3 @@ const ProductItem = ({ data }) => {
     </div>
   );
 };
-
-export default ProductItem;

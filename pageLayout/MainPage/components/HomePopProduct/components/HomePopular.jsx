@@ -7,7 +7,7 @@ import classes from "./HomePopular.module.css";
 const HomePopular = ({ mainData }) => {
   return (
     <div className={classes.containerHomeProduct}>
-      <h3>Популярные hello Каныбек</h3>
+      <h3>Популярные</h3>
       <HomePopularProduct mainData={mainData} />
     </div>
   );
