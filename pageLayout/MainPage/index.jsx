@@ -30,7 +30,15 @@ const HomePage = ({ mainData }) => {
         backdropRef={backdropRef}
         currentY={currentY}
       >
-        hello
+        <img
+          style={{
+            width: "270px",
+            height: "250px",
+          }}
+          src='https://i.pinimg.com/originals/12/82/1a/12821aef23d6a0615e08d056bf5018e1.jpg'
+          alt=''
+        />
+        <h3>Ulan baby</h3>
       </Backdrop>
 
       <button onClick={openBackdrop}>Open Backdrop</button>
