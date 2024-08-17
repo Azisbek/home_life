@@ -1,5 +1,6 @@
 import { ProductId } from "../../../pageLayout/ProductId";
 
+
 const ProductgDetail = () => {
   return <ProductId />;
 };
