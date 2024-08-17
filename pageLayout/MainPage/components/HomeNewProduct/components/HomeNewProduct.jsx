@@ -1,5 +1,5 @@
 import React from "react";
-import HomeProductNewList from "./HomeProductNewList";
+import { HomeProductNewList } from "./HomeProductNewList";
 import { ProductList } from "../../../content/data";
 import classes from "./HomeNewProduct.module.css";
 

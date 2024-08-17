@@ -2,7 +2,6 @@
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(291px, 1fr));
   gap: 19px;
-  margin-bottom: 90px;
   justify-content: center;
 }
 
@@ -10,7 +9,6 @@
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(174px, 1fr));
   gap: 10px;
-  margin-bottom: 90px;
   justify-content: center;
 }
 

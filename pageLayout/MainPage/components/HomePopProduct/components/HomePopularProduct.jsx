@@ -1,17 +1,26 @@
 import React from "react";
-
 import ProductItem from "../../../../../components/ProductItem/ProductItem";
+import { ProductItemMobile } from "../../../../../components/ProductItemMobile/ProductItemMobile";
+import { store } from "../../../../../store";
+import s from "./HomePopularProduct.module.css";
+import { observer } from "mobx-react-lite";
 
-import classes from "./HomePopularProduct.module.css";
+const HomePopularProduct = observer(({ mainData }) => {
+  const { devicesStore } = store;
+  const { isMobile } = devicesStore;
 
-const HomePopularProduct = ({ mainData }) => {
+  console.log(mainData);
   return (
-    <div className={classes.containerProduct}>
-      {mainData.map((el, index) => {
-        return <ProductItem data={el} key={el.title + index} />;
+    <div className={isMobile ? s.containerProductMobile : s.containerProduct}>
+      {mainData?.map((el, index) => {
+        return isMobile ? (
+          <ProductItemMobile data={el} key={`${index}-${el.title}`} />
+        ) : (
+          <ProductItem data={el} key={`${index}-${el.title}`} />
+        );
       })}
     </div>
   );
-};
+});
 
 export default HomePopularProduct;
