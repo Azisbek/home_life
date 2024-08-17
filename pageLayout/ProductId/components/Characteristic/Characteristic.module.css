@@ -1,0 +1,25 @@
+.container {
+  max-width: 364px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.title {
+  color: rgb(29, 29, 26);
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 24px;
+  padding-bottom: 32px;
+}
+
+.blockList {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+
+  color: rgb(74, 74, 72);
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 17px;
+}

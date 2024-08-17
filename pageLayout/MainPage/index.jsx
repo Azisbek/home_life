@@ -4,7 +4,7 @@ import { BannerHome } from "./components/HomeBanner";
 import { HomeSelected } from "./components/HomeSelect";
 import { HomePromotion } from "./components/HomePromotionProduct";
 import { HomePopular } from "./components/HomePopProduct";
-import { ProductList } from "./content/data";
+import { productList } from "./content/data";
 import { HomeAbout } from "./components/HomeAbout";
 import Backdrop from "../../components/Backdrop/Backdrop";
 import { useToggleBackdrop } from "../../hook/useToggleBackdrop";
@@ -37,7 +37,7 @@ const HomePage = ({ mainData }) => {
       <BannerHome />
       <HomeSelected />
       <HomeNewProduct mainData={mainData} />
-      <HomePopular mainData={ProductList} />
+      <HomePopular mainData={productList} />
       <HomePromotion mainData={mainData} />
       <HomeAbout />
 
