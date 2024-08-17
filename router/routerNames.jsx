@@ -5,4 +5,6 @@ export const ROUTER_NAMES = {
   PERSONAL_AREA: "/personal-area",
   BASKET: "/basket",
   PRODUCT: "/product",
+  CONTACTS: "/contacts",
+  ABOUT: "/about",
 };

@@ -20,13 +20,9 @@ const AppHeader = () => {
           <Image src={logo} alt='logo' width={182} />
         </div>
 
-        <div>
-          <AppNavigateHeader />
-        </div>
+        <AppNavigateHeader />
 
-        <div onClick={onOpen}>
-          <AppProfileHeader />
-        </div>
+        <AppProfileHeader onOpen={onOpen} />
       </header>
 
       <CustomModal isOpen={isOpen} onClose={onClose}>

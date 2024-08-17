@@ -1,13 +1,15 @@
 import React from "react";
-import classes from "./AppNavigateHeader.module.css";
+import Link from "next/link";
+import { ROUTER_NAMES } from "../../../router/routerNames";
+import s from "./AppNavigateHeader.module.css";
 
 export const AppNavigateHeader = () => {
   return (
-    <ul className={classes.containerNavigate}>
-      <li>Главная </li>
-      <li>Контакты</li>
-      <li>Корзина</li>
-      <li>О нас</li>
+    <ul className={s.containerNavigate}>
+      <Link href={ROUTER_NAMES.HOME}>Главная </Link>
+      <Link href={ROUTER_NAMES.CONTACTS}>Контакты</Link>
+      <Link href={ROUTER_NAMES.BASKET}>Корзина</Link>
+      <Link href={ROUTER_NAMES.ABOUT}>О нас</Link>
     </ul>
   );
 };

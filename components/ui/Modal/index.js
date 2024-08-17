@@ -1,3 +1,1 @@
-import { CustomModal } from "./components/CustomModal"
-
-export { CustomModal }
+export { CustomModal } from "./components/CustomModal";

@@ -37,7 +37,6 @@ function MyApp({ Component, pageProps }) {
 
   return (
     <AppLayout>
-      <div id='modal-portal'></div>
       <Component {...pageProps} />
     </AppLayout>
   );

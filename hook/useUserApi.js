@@ -15,12 +15,14 @@ export const useUserApi = () => {
       password: form.password,
     };
 
+    console.log(form);
+
     try {
       const response = await UserApi.signUp(data);
       const { user } = response.data;
       localStorage.setItem("access", user.access);
       localStorage.setItem("refresh", user.refresh);
-
+ 
       const userResponse = await UserApi.getProfile();
       localStorage.setItem("user", JSON.stringify(userResponse));
       setUser(userResponse);
@@ -33,3 +35,7 @@ export const useUserApi = () => {
 
   return { user, error, signUp, setError };
 };
+
+
+
+

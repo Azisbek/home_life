@@ -4,5 +4,7 @@
   gap: 40px;
 }
 
-.containerNavigate li {
+.containerNavigate a {
+  text-decoration: none;
+  
 }

@@ -1,0 +1,146 @@
+.open {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 2;
+}
+
+.drawerBody {
+  animation-duration: 0.5s;
+  animation-timing-function: ease-in-out;
+}
+
+.right {
+  top: 0;
+  right: 0;
+}
+
+.right .drawerBody.show {
+  animation-name: right-appear;
+}
+
+.right .drawerBody.hide {
+  animation-name: right-fade;
+}
+
+@keyframes right-appear {
+  from {
+    transform: translateX(100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+@keyframes right-fade {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(100%);
+  }
+}
+
+.left {
+  top: 0;
+  left: 0;
+}
+
+.left .drawerBody.show {
+  animation-name: left-appear;
+}
+
+.left .drawerBody.hide {
+  animation-name: left-fade;
+}
+
+@keyframes left-appear {
+  from {
+    transform: translateX(-100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+@keyframes left-fade {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}
+
+.top {
+  top: 0;
+  left: 0;
+}
+
+.top .drawerBody.show {
+  animation-name: top-appear;
+}
+
+.top .drawerBody.hide {
+  animation-name: top-fade;
+}
+
+@keyframes top-appear {
+  from {
+    transform: translateY(-100%);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+
+@keyframes top-fade {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(-100%);
+  }
+}
+
+.bottom {
+  bottom: 0;
+  left: 0;
+}
+
+.bottom .drawerBody.show {
+  animation-name: bottom-appear;
+}
+
+.bottom .drawerBody.hide {
+  animation-name: bottom-fade;
+}
+
+@keyframes bottom-appear {
+  from {
+    transform: translateY(100%);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+
+@keyframes bottom-fade {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(100%);
+  }
+}
+
+.top,
+.bottom {
+  flex-direction: column;
+}
+
+.bottom,
+.right {
+  justify-content: flex-end;
+}
