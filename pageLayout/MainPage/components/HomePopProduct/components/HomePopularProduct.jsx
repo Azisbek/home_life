@@ -7,8 +7,8 @@ import classes from "./HomePopularProduct.module.css";
 const HomePopularProduct = ({ mainData }) => {
   return (
     <div className={classes.containerProduct}>
-      {mainData.map((el) => {
-        return <ProductItem data={el} />;
+      {mainData.map((el, index) => {
+        return <ProductItem data={el} key={el.title + index} />;
       })}
     </div>
   );
