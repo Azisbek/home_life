@@ -11,15 +11,16 @@ import { useToggleBackdrop } from "../../hook/useToggleBackdrop";
 import { Drawer } from "../../components/ui/Drawer/Drawer";
 
 const HomePage = ({ mainData }) => {
-  const {
-    isOpen,
-    currentY,
-    backdropRef,
-    handleTouchStart,
-    handleTouchMove,
-    handleTouchEnd,
-    openBackdrop,
-  } = useToggleBackdrop();
+  // const {
+  //   isOpen,
+  //   currentY,
+  //   backdropRef,
+  //   handleTouchStart,
+  //   handleTouchMove,
+  //   handleTouchEnd,
+  //   openBackdrop,
+  // } = useToggleBackdrop();
+  console.log(mainData);
   return (
     <>
       {/* <Backdrop
@@ -44,9 +45,9 @@ const HomePage = ({ mainData }) => {
       {/* <button onClick={openBackdrop}>Open Backdrop</button> */}
       <BannerHome />
       <HomeSelected />
-      <HomeNewProduct mainData={mainData} />
-      <HomePopular mainData={productList} />
-      <HomePromotion mainData={mainData} />
+      <HomeNewProduct mainData={mainData.new} />
+      <HomePopular mainData={mainData.popular} />
+      <HomePromotion mainData={mainData.promotion} />
       <HomeAbout />
 
       {/* <Drawer isOpen={true} placement='bottom'>

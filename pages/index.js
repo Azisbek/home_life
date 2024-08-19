@@ -2,7 +2,7 @@ import HomePage from "../pageLayout/MainPage";
 import { MainPageApi } from "../services/api/MainPageApi";
 
 const Home = ({ mainData }) => {
-  return <HomePage mainData={mainData} />;
+  return <HomePage mainData={mainData.homepage} />;
 };
 export default Home;
 

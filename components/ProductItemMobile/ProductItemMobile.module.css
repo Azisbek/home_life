@@ -18,6 +18,11 @@
   justify-content: center;
 }
 
+.blockImg img {
+  width: 158px;
+  height: 164px;
+}
+
 .contentProductCart {
   display: flex;
   flex-direction: column;

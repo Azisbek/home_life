@@ -1,13 +1,12 @@
 import React from "react";
 import { ProductList } from "../../../../../components/ProductList/ProductList";
-import classes from "./HomePromotion.module.css";
+import s from "./HomePromotion.module.css";
 
-const HomePromotion = () => {
-  const array = [1, 2, 3, 4];
+const HomePromotion = ({ mainData }) => {
   return (
-    <div className={classes.containerHomeProduct}>
+    <div className={s.containerHomeProduct}>
       <h3>Акции</h3>
-      <ProductList data={array} />
+      <ProductList data={mainData} />
     </div>
   );
 };

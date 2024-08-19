@@ -12,7 +12,7 @@ import s from "./ProductItemMobile.module.css";
 import { ROUTER_NAMES } from "../../router/routerNames";
 
 export const ProductItemMobile = ({ data }) => {
-  const { title, rating, price, id } = data;
+  const { title, rating, price, id, image } = data;
 
   const router = useRouter();
 
@@ -23,7 +23,7 @@ export const ProductItemMobile = ({ data }) => {
   return (
     <div className={s.blockCart}>
       <div className={s.blockImg}>
-        <Image src={ProductImg} width={158} height={164} />
+        <img src={image} alt='product' />
       </div>
       <SwiperBullet count={3} num={1} />
       <div className={s.contentProductCart}>

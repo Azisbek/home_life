@@ -17,6 +17,10 @@
   display: flex;
   justify-content: center;
 }
+.blockImg img {
+  width: 245px;
+  height: 255px;
+}
 
 .contentProductCart {
   display: flex;
