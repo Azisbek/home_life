@@ -3,7 +3,7 @@
 .blockCart {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  gap: 20px;
   width: 100%;
 
   padding: 30px 23px;

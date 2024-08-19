@@ -22,7 +22,7 @@ const HomePage = ({ mainData }) => {
   } = useToggleBackdrop();
   return (
     <>
-      <Backdrop
+      {/* <Backdrop
         isOpen={isOpen}
         handleTouchStart={handleTouchStart}
         handleTouchMove={handleTouchMove}
@@ -39,9 +39,9 @@ const HomePage = ({ mainData }) => {
           alt=''
         />
         <h3>Ulan baby</h3>
-      </Backdrop>
+      </Backdrop> */}
 
-      <button onClick={openBackdrop}>Open Backdrop</button>
+      {/* <button onClick={openBackdrop}>Open Backdrop</button> */}
       <BannerHome />
       <HomeSelected />
       <HomeNewProduct mainData={mainData} />

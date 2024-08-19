@@ -1,5 +1,5 @@
 import React from "react";
-import PromotionProduct from "./PromotionProduct";
+import { ProductList } from "../../../../../components/ProductList/ProductList";
 import classes from "./HomePromotion.module.css";
 
 const HomePromotion = () => {
@@ -7,7 +7,7 @@ const HomePromotion = () => {
   return (
     <div className={classes.containerHomeProduct}>
       <h3>Акции</h3>
-      <PromotionProduct array={array} />
+      <ProductList data={array} />
     </div>
   );
 };

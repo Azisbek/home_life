@@ -1,13 +1,13 @@
 import React from "react";
-import { HomeProductNewList } from "./HomeProductNewList";
-import { ProductList } from "../../../content/data";
-import classes from "./HomeNewProduct.module.css";
+import { ProductList } from "../../../../../components/ProductList/ProductList";
+import { productList } from "../../../content/data";
+import s from "./HomeNewProduct.module.css";
 
-const HomeNewProduct = ({ mainData }) => {
+const HomeNewProduct = () => {
   return (
-    <section className={classes.containerHomeProduct}>
+    <section className={s.containerHomeProduct}>
       <h3>Новинки</h3>
-      <HomeProductNewList mainData={ProductList} />
+      <ProductList data={productList} />
     </section>
   );
 };

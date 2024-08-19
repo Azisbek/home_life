@@ -1,11 +1,11 @@
 import React from "react";
-import { ProductList } from "./components/ProductList/ProductList";
+import { ProductContainer } from "./components/Product/ProductContainer";
+import { data } from "./content/content";
 
-const CatalogPage = ({ data }) => {
-  console.log(data);
+const CatalogPage = () => {
   return (
     <>
-      <ProductList />
+      <ProductContainer data={data} />
     </>
   );
 };
