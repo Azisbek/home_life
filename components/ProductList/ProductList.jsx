@@ -24,12 +24,15 @@ export const ProductList = observer(({ data }) => {
         ? loading
           ? generateProductSkeletons(8)
           : data.map((product, index) => (
-              <ProductItemMobile data={product} key={index + product.title} />
+              <ProductItemMobile
+                data={product}
+                key={`${index} ${product.title}`}
+              />
             ))
         : loading
         ? generateProductSkeletons(8)
         : data.map((product, index) => (
-            <ProductItem data={product} key={index + product.title} />
+            <ProductItem data={product} key={`${index} ${product.title}`} />
           ))}
     </div>
   );

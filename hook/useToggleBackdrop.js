@@ -4,7 +4,6 @@ export const useToggleBackdrop = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [startY, setStartY] = useState(0);
   const [currentY, setCurrentY] = useState(window.innerHeight);
-  const backdropRef = (useRef < HTMLDivElement) | (null > null);
 
   const handleTouchStart = (e) => {
     setStartY(e.touches[0].clientY);
@@ -40,7 +39,6 @@ export const useToggleBackdrop = () => {
   return {
     isOpen,
     currentY,
-    backdropRef,
     handleTouchStart,
     handleTouchMove,
     handleTouchEnd,

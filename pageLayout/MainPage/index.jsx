@@ -10,7 +10,7 @@ import Backdrop from "../../components/Backdrop/Backdrop";
 import { useToggleBackdrop } from "../../hook/useToggleBackdrop";
 import { Drawer } from "../../components/ui/Drawer/Drawer";
 
-const HomePage = ({ mainData }) => {
+const HomePage = ({ mainData, status }) => {
   // const {
   //   isOpen,
   //   currentY,
@@ -20,7 +20,7 @@ const HomePage = ({ mainData }) => {
   //   handleTouchEnd,
   //   openBackdrop,
   // } = useToggleBackdrop();
-  console.log(mainData);
+  console.log(status);
   return (
     <>
       {/* <Backdrop

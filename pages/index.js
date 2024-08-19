@@ -1,17 +1,18 @@
 import HomePage from "../pageLayout/MainPage";
 import { MainPageApi } from "../services/api/MainPageApi";
 
-const Home = ({ mainData }) => {
-  return <HomePage mainData={mainData.homepage} />;
+const Home = ({ mainData, statusText }) => {
+  return <HomePage mainData={mainData.homepage} status={statusText} />;
 };
 export default Home;
 
 export const getServerSideProps = async () => {
   try {
-    const { data } = await MainPageApi.getMainPage();
+    const { data, status } = await MainPageApi.getMainPage();
     return {
       props: {
         mainData: data,
+        statusText: status,
       },
     };
   } catch (error) {

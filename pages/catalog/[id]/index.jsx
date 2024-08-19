@@ -1,25 +1,27 @@
 import { ProductId } from "../../../pageLayout/ProductId";
+import { ProductIdApi } from "../../../services/api/ProductIdApi";
 
-
-const ProductgDetail = () => {
-  return <ProductId />;
+const ProductDetail = ({ catalogData }) => {
+  return <ProductId catalogData={catalogData} />;
 };
 
-export default ProductgDetail;
+export default ProductDetail;
 
-// export const getServerSideProps = async () => {
-//   try {
-//     const { data } = await CatalogPageApi.getCatalogPage();
-//     return {
-//       props: {
-//         catalogData: data,
-//       },
-//     };
-//   } catch (error) {
-//     return {
-//       props: {
-//         mainData: "error",
-//       },
-//     };
-//   }
-// };
+export const getServerSideProps = async (context) => {
+  const id = context.params;
+  try {
+    const { data } = await ProductIdApi.getMainPage(id);
+    return {
+      props: {
+        catalogData: data,
+      },
+    };
+  } catch (error) {
+    console.error("Error:", error);
+    return {
+      props: {
+        catalogData: null,
+      },
+    };
+  }
+};
