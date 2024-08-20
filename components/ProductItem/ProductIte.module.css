@@ -2,9 +2,7 @@
 
 .blockCart {
   position: relative;
-
   padding: "20px";
-
   color: "#000000";
   background: "#efefef";
   border-radius: 10px;
@@ -21,12 +19,9 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-
   width: 291px;
   height: 564px;
-
   padding: 30px 23px;
-
   border: 0.5px solid rgb(210, 210, 209);
 }
 
@@ -34,7 +29,6 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-
   min-height: 183px;
 }
 

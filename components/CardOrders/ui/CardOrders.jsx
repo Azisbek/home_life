@@ -1,14 +1,19 @@
 import React from "react";
+import { AppButton } from "../../ui/Button/AppButton";
+import s from "./CardOrders.module.css"
 
 export const CardOrders = ({ quantity, subtotal, totalPrice }) => {
   return (
-    <div>
-      <p>Сумма заказов </p>
+    <div className={s.contain}>
+      <p className={s.title}>Сумма заказов </p>
 
-      <p>Товары: {quantity}шт </p>
-      <p>Подытог: {subtotal}сом </p>
-
-      <p>Итого: {totalPrice}</p>
+      <p className={s.product}>Товары: {quantity}шт </p>
+      <p className={s.summary}>Подытог: {subtotal}сом </p>
+      <div className={s.block}>
+      <p className={s.result}>Итого:</p>
+      <p> {totalPrice}</p>
+      </div>
+      <AppButton className={s.button}>Подтвердить заказ</AppButton>
     </div>
   );
 };

@@ -1,0 +1,48 @@
+.contain {
+  max-width: 305px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  border: 0.5px solid rgb(210, 210, 209);
+  border-radius: 10px;
+  padding: 20px 30px 20px 20px;
+}
+
+.title {
+font-size: 26px;
+font-weight: 500;
+line-height: 32px;
+}
+
+
+.result {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 22px;
+}
+.block {
+  margin-top: 28px;
+  padding-top: 20px;
+  border-top: 0.96px solid rgb(220, 222, 234);
+  display: flex;
+  justify-content: space-between;
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 22px;
+}
+.button {
+  background-color: rgb(250, 213, 73);
+  padding: 12px 0;
+  border: none;
+  border-radius: 5px;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 19px;
+  cursor: pointer;
+  min-width: 264px;
+  min-height: 45px;
+}
