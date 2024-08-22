@@ -7,11 +7,12 @@ import s from "./ProductId.module.css";
 
 export const ProductId = ({ catalogData }) => {
   console.log(catalogData);
+
   return (
     <div className={s.container}>
-      <ViewProduct />
-      <Characteristic />
-      <Description array={[]} />
+      <ViewProduct data={catalogData} />
+      <Characteristic data={catalogData} />
+      <Description data={catalogData} />
       <CustomerReviewes array={[]} />
     </div>
   );
