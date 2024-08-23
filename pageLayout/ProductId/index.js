@@ -23,7 +23,9 @@ export const ProductId = ({ catalogData }) => {
       )}
       <Space h={isMobile ? 40 : 90} />
       <Characteristic data={catalogData} />
+      <Space h={isMobile ? 40 : 90} />
       <Description data={catalogData} />
+      <Space h={isMobile ? 40 : 90} />
       <CustomerReviewes array={[]} />
     </div>
   );

@@ -12,7 +12,7 @@ export const ViewProductMobile = ({ data }) => {
 
       <div className={s.containerBlock}>
         <Rating
-          size={16}
+          size={20}
           initialValue={data.avg_rating}
           allowFraction={true}
           readonly={true}

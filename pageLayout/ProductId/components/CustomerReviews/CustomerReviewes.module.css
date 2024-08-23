@@ -1,3 +1,19 @@
+.title {
+  color: rgb(29, 29, 26);
+  font-size: 28px;
+  font-weight: 600;
+  line-height: 34px;
+}
+
+@media only screen and (max-width: 768px) {
+  .title {
+    color: rgb(29, 29, 26);
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 20px;
+  }
+}
+
 .container {
   display: flex;
   justify-content: space-between;
@@ -13,4 +29,17 @@
   border: 0;
   border-bottom: 1px solid #4f68ff;
   cursor: pointer;
+}
+
+@media only screen and (max-width: 768px) {
+  .button {
+    color: rgb(79, 104, 255);
+    background-color: white;
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 15px;
+    border: 0;
+    border-bottom: 1px solid #4f68ff;
+    cursor: pointer;
+  }
 }
