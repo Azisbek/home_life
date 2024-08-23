@@ -9,10 +9,10 @@ export const ViewProduct = ({ data }) => {
     <div className={s.container}>
       <h3>Просмотр товара</h3>
       <div className={s.aboutProduct}>
-        <div className={s.containerCleaner}>
-          <img className={s.cleaner} src={data.image1} alt='img' />
+        <div>
+          <img className={s.productImg} src={data.image1} alt='img' />
         </div>
-        <div className={s.descriptionCleaner}>
+        <div className={s.description}>
           <span>{data.brand.title}</span>
           <Rating
             size={26}
@@ -20,14 +20,16 @@ export const ViewProduct = ({ data }) => {
             allowFraction={true}
             readonly={true}
           />
-          <p className={s.col}>Цвета</p>
+          <p className={s.colorText}>Цвета</p>
           <div className={s.color}>
             <div className={s.color1}></div>
             <div className={s.color2}></div>
           </div>
           <p>{data.price}</p>
           <Counter />
-          <AppButton className={s.button}>Перейти в корзину</AppButton>
+          <AppButton className={s.button} variant='button'>
+            Добавить в корзину
+          </AppButton>
         </div>
       </div>
     </div>

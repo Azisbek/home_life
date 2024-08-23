@@ -24,6 +24,7 @@
     "react-slideshow-image": "^4.3.1",
     "react-smart-slider": "^0.1.2",
     "react-star-rating": "^1.4.2",
+    "sass": "^1.77.8",
     "webpack": "^5.93.0"
   },
   "devDependencies": {

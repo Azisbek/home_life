@@ -12,7 +12,7 @@ import s from "./ProductItem.module.css";
 import { ROUTER_NAMES } from "../../router/routerNames";
 
 const ProductItem = ({ data }) => {
-  const { title, rating, price, id, image1 } = data;
+  const { title, avg_rating, price, id, image1 } = data;
 
   const router = useRouter();
 
@@ -30,7 +30,7 @@ const ProductItem = ({ data }) => {
         <div className={s.starTitleContainer}>
           <Rating
             size={24}
-            initialValue={rating}
+            initialValue={avg_rating}
             allowFraction={true}
             readonly={true}
           />
