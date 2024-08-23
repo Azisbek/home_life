@@ -1,13 +1,18 @@
-.container {
+.block {
   display: flex;
   align-items: center;
+  flex-wrap: wrap;
   justify-content: space-between;
-  min-width: 895px;
+  justify-content: center;
+  
+}
+
+.container {
   border: 0.5px solid rgb(210, 210, 209);
   border-radius: 10px;
-
-  padding: 30px ;
+  padding: 30px 24px;
   position: relative;
+  max-width: 895px;
 }
 
 .container img {
@@ -24,6 +29,20 @@
   cursor: pointer;
   font-size: 15px;
 }
-.price{
-  margin-right: 71px;
+.title {
+  padding-left: 40px;
+  padding-right: 60px;
+  color: rgb(29, 29, 26);
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 17px;
+}
+
+.price {
+  margin-right: 40px;
+  padding-left: 40px;
+  color: rgb(0, 0, 0);
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 22px;
 }

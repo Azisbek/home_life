@@ -1,41 +1,30 @@
 @import "react-slideshow-image/dist/styles.css";
 
 .blockCart {
-  position: relative;
-  padding: "20px";
-  color: "#000000";
-  background: "#efefef";
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 100%;
+
+  padding: 30px 23px;
+
+  border: 0.5px solid rgb(210, 210, 209);
+
   border-radius: 10px;
 }
 
-.divStyle {
-  display: "flex";
-  align-items: center;
-  justify-content: center;
-  background-size: cover;
-}
-
-.blockCart {
+.blockImg {
   display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  width: 291px;
-  height: 564px;
-  padding: 30px 23px;
-  border: 0.5px solid rgb(210, 210, 209);
+  justify-content: center;
+}
+.blockImg img {
+  width: 245px;
+  height: 255px;
 }
 
 .contentProductCart {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
-  min-height: 183px;
-}
-
-.blockPrice {
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
 }
 
 .title {
@@ -50,8 +39,15 @@
   line-height: 22px;
 }
 
+.information {
+  padding-bottom: 10px;
+}
+
 .starTitleContainer {
   display: flex;
   flex-direction: column;
+  align-items: center;
   gap: 10px;
+  padding-top: 10px;
+  padding-bottom: 10px;
 }

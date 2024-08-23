@@ -1,14 +1,14 @@
 import React from "react";
 
-import HomePopularProduct from "./HomePopularProduct";
+import { ProductList } from "../../../../../components/ProductList/ProductList";
 
 import classes from "./HomePopular.module.css";
 
 const HomePopular = ({ mainData }) => {
   return (
     <div className={classes.containerHomeProduct}>
-      <h3>Популярные hello Каныбек</h3>
-      <HomePopularProduct mainData={mainData} />
+      <h3>Популярные</h3>
+      <ProductList data={mainData} />
     </div>
   );
 };

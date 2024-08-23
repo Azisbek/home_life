@@ -1,8 +1,10 @@
+ 
+
 .contain {
   display: flex;
-  gap: 20px;
   flex-direction: row;
   align-items: center;
+  gap: 20px;
 }
 
 .number {

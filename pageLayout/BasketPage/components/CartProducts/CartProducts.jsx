@@ -7,10 +7,17 @@ export const CartProducts = () => {
   const array = [
     {
       image: "https://kupi.kg/cache/files/904.jpg_w800_h800_resize.jpg",
-      title: "vacuum cleaner",
+      title: "Стиральная машина Beko WRE6511BWW",
       price: 2000,
       quantity: 4,
     },
+    {
+      image: "https://kupi.kg/cache/files/904.jpg_w800_h800_resize.jpg",
+      title: "Стиральная машина Beko WRE6511BWW",
+      price: 2000,
+      quantity: 4,
+    },
+    
   ];
 
   return (
@@ -19,7 +26,7 @@ export const CartProducts = () => {
       <div className={s.containerBlock}>
         {array.map((el, index) => {
           return (
-            <div key={el.title + index}>
+            <div key={el.title}>
               <ProductBasket
                 image={el.image}
                 title={el.title}

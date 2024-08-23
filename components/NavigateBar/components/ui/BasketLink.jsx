@@ -17,7 +17,7 @@ export const BasketLink = () => {
         color={pathName === ROUTER_NAMES.BASKET ? "#2241FC" : "black"}
         size={20}
       />
-      Каталог
+      Корзина
     </Link>
   );
 };

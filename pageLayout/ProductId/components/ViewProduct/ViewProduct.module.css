@@ -19,7 +19,8 @@
 
 .descriptionCleaner {
   display: flex;
-  flex-direction: column;  margin-bottom: 90px;
+  flex-direction: column;  
+  margin-bottom: 90px;
 }
 
 .col {

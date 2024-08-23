@@ -1,6 +1,6 @@
 export const productList = [
   {
-    id:"3",
+    id: "3",
     title: "Пылесос Samsung",
     rating: 3.5,
     price: 30100,
@@ -29,6 +29,11 @@ export const productList = [
     title: "Пылесос transformer",
     rating: 3.5,
     price: 3000,
+  },
+  {
+    title: "Пылесос autoboty",
+    rating: 5,
+    price: 54000,
   },
   {
     title: "Пылесос autoboty",
