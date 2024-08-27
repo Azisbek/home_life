@@ -18,7 +18,7 @@ export const SwipeImage = ({ images }) => {
   });
 
   return (
-    <div {...handlers} className={s.swiperContainer}>
+    <div {...handlers} key={currentIndex} className={s.swiperContainer}>
       <img
         src={images[currentIndex]}
         alt={`image ${currentIndex}`}
