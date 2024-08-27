@@ -4,12 +4,13 @@ import { Rating } from "react-simple-star-rating";
 import { Counter } from "../../../../components/ui/Counter/Counter";
 import s from "./ViewProductMobile.module.css";
 import { Space } from "../../../../components/ui/Space/Space";
+import { SwipeImage } from "../../../../components/SwipeImage/SwipeImage";
 
 export const ViewProductMobile = ({ data }) => {
   return (
     <div className={s.container}>
-      <img src={data.image1} alt='' className={s.productImg} />
-
+      {/* <img src={data.images[0]} alt='' className={s.productImg} /> */}
+      <SwipeImage images={data.images} />
       <div className={s.containerBlock}>
         <Rating
           size={20}
@@ -24,9 +25,7 @@ export const ViewProductMobile = ({ data }) => {
 
           <Space h={14} />
           <div className={s.colorBlock}>
-            <div />
-            <div />
-            <div />
+            <div style={{ background: data.color.key }} />
           </div>
           <Space h={22} />
           <p className={s.price}>{data.price} сом</p>

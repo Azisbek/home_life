@@ -52,10 +52,9 @@
   width: 16px;
   height: 16px;
   border-radius: 50%;
-  background-color: red;
+  border: 1px solid;
 }
 
 .button {
   padding: 12px;
-  /* align-self: stretch;  */
 }

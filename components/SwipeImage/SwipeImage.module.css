@@ -1,0 +1,12 @@
+.image {
+  width: 326px;
+  height: 359px;
+  object-fit: cover;
+}
+
+@media only screen and (max-width: 768px) {
+  .image {
+    width: 280px;
+    height: 308px;
+  }
+}

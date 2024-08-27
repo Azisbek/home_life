@@ -12,8 +12,6 @@ export const ProductId = ({ catalogData }) => {
   const { devicesStore } = store;
   const { isMobile } = devicesStore;
 
-  console.log(catalogData);
-
   return (
     <div className={s.container}>
       {isMobile ? (

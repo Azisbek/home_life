@@ -1,5 +1,6 @@
 import React from "react";
 import { AppButton } from "../../../../components/ui/Button/AppButton";
+import { SwipeImage } from "../../../../components/SwipeImage/SwipeImage";
 import { Rating } from "react-simple-star-rating";
 import { Counter } from "../../../../components/ui/Counter/Counter";
 import s from "./ViewProduct.module.css";
@@ -10,7 +11,7 @@ export const ViewProduct = ({ data }) => {
       <h3>Просмотр товара</h3>
       <div className={s.aboutProduct}>
         <div>
-          <img className={s.productImg} src={data.image1} alt='img' />
+          <SwipeImage images={data.images} />
         </div>
         <div className={s.description}>
           <span>{data.brand.title}</span>
@@ -22,8 +23,7 @@ export const ViewProduct = ({ data }) => {
           />
           <p className={s.colorText}>Цвета</p>
           <div className={s.color}>
-            <div className={s.color1}></div>
-            <div className={s.color2}></div>
+            <div style={{ background: data.color.key }} />
           </div>
           <p>{data.price}</p>
           <Counter />

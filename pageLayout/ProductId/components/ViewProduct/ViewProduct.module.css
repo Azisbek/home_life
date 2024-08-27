@@ -39,15 +39,10 @@
   margin-top: 5px;
 }
 
-.color1 {
+.color div {
   border-radius: 50%;
   background-color: rgb(155, 159, 160);
   width: 29px;
   height: 29px;
-}
-.color2 {
-  border-radius: 50%;
-  background-color: rgb(0, 0, 0);
-  width: 29px;
-  height: 29px;
+  border: 1px solid;
 }
