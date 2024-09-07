@@ -2,7 +2,7 @@ import React from "react";
 import clsx from "clsx";
 import Image from "next/image";
 import { useDisclosure } from "@chakra-ui/react";
-import { SignUp } from "../SignUp";
+import { SignIn } from "../../components/Account/SignIn";
 import { AppNavigateHeader } from "./components/AppNavigateHeader";
 import { AppProfileHeader } from "./components/AppProfileHeader";
 
@@ -24,9 +24,8 @@ const AppHeader = () => {
 
         <AppProfileHeader onOpen={onOpen} />
       </header>
-
       <CustomModal isOpen={isOpen} onClose={onClose}>
-        <SignUp onClose={onClose} />
+        <SignIn onClose={onClose} />
       </CustomModal>
     </React.Fragment>
   );

@@ -5,8 +5,10 @@ export const useUserApi = () => {
   const [user, setUser] = useState(null);
   const [error, setError] = useState(null);
 
-  const signUp = async (form) => {
+  const SignUp = async (form) => {
     const data = {
+      gender: +form.gender,
+      age: +form.age,
       first_name: form.first_name,
       last_name: form.last_name,
       email: form.email,
@@ -19,12 +21,26 @@ export const useUserApi = () => {
 
     try {
       const response = await UserApi.signUp(data);
+      return response;
+    } catch (error) {
+      console.log(error.message);
+      setError("Ошибка регистрации.");
+    }
+  };
+
+  const SignIn = async (form) => {
+    const data = {
+      email: form.email,
+      password: form.password,
+    };
+
+    try {
+      const response = await UserApi.signIn(data);
       const { user } = response.data;
-      localStorage.setItem("access", user.access);
-      localStorage.setItem("refresh", user.refresh);
- 
+      localStorage.setItem("access", user.tokens.access);
+      localStorage.setItem("refresh", user.tokens.refresh);
+
       const userResponse = await UserApi.getProfile();
-      localStorage.setItem("user", JSON.stringify(userResponse));
       setUser(userResponse);
       setError(null);
     } catch (error) {
@@ -33,9 +49,5 @@ export const useUserApi = () => {
     }
   };
 
-  return { user, error, signUp, setError };
+  return { user, error, SignUp, setError, SignIn };
 };
-
-
-
-

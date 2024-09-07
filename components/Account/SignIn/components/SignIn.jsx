@@ -1,28 +1,23 @@
 import { useState } from "react";
 import Image from "next/image";
-import { AppButton } from "../../ui/Button/AppButton";
-import { CloseEye } from "../../../assets/icon/close.svg";
-import { OpenEye } from "../../../assets/icon/eye-open.svg";
-import GoogleIcon from "../../../assets/icon/google_icon.svg";
-import { useUserApi } from "../../../hook/useUserApi";
-import { Input } from "../../ui/Input/Input";
+import { AppButton } from "../../../ui/Button/AppButton";
+import { CloseEye } from "../../../../assets/icon/close.svg";
+import { OpenEye } from "../../../../assets/icon/eye-open.svg";
+import GoogleIcon from "../../../../assets/icon/google_icon.svg";
+import { useUserApi } from "../../../../hook/useUserApi";
+import { Input } from "../../../ui/Input/Input";
 
-import s from "./styled.module.css";
+import s from "./SignIn.module.css";
 
 const SignUp = ({ onClose }) => {
   const [show, setShow] = useState(false);
   const [showConfirm, setShowConfirm] = useState(false);
 
-  const { user, error, signUp, setError } = useUserApi();
+  const { user, error, SignIn, setError } = useUserApi();
 
   const [form, setForm] = useState({
-    first_name: "",
-    last_name: "",
     email: "",
-    username: "",
-    number: "",
     password: "",
-    confirmPassword: "",
   });
 
   const clickOpenEyeHandler = () => {
@@ -50,40 +45,21 @@ const SignUp = ({ onClose }) => {
     }
 
     const data = {
-      first_name: form.first_name,
-      last_name: form.last_name,
       email: form.email,
-      username: form.username,
-      number: form.number,
       password: form.password,
     };
 
-    await signUp(data);
+    await SignIn(data);
   };
 
   return (
     <div className={s.container}>
-      {error && <p>{error}</p>}
       <div className={s.blockTitle}>
-        <h2>Зарегистрироваться</h2>
+        <h2>Login</h2>
         <p>У вас уже есть учетная запись? Войти</p>
       </div>
 
       <form className={s.formContainer} onSubmit={handleSubmit}>
-        <Input
-          name='first_name'
-          value={form.first_name}
-          onChange={handleInputChange}
-          placeholder='Имя*'
-        />
-
-        <Input
-          name='last_name'
-          value={form.last_name}
-          onChange={handleInputChange}
-          placeholder='Фамилия*'
-        />
-
         <Input
           name='email'
           value={form.email}
@@ -92,22 +68,8 @@ const SignUp = ({ onClose }) => {
         />
 
         <Input
-          name='username'
-          value={form.username}
-          onChange={handleInputChange}
-          placeholder='Имя пользователя*'
-        />
-
-        <Input
-          name='number'
-          value={form.number}
-          onChange={handleInputChange}
-          placeholder='Номер телефона'
-        />
-
-        <Input
           name='password'
-          type={show ? "text" : "password"}
+          // type={show ? "text" : "password"}
           value={form.password}
           onChange={handleInputChange}
           placeholder='Введите пароль*'
@@ -128,9 +90,9 @@ const SignUp = ({ onClose }) => {
         <AppButton className={s.googleBtn} variant='whiteBtn' onClick={onClose}>
           <Image src={GoogleIcon} alt='googleIcon' /> Войти с помощью Google
         </AppButton>
-
+        {error && <p>{error}</p>}
         <AppButton variant='button' type='submit'>
-          Регистрация
+          Login
         </AppButton>
 
         <AppButton variant='whiteBtn' onClick={onClose}>

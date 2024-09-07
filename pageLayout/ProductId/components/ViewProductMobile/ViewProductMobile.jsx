@@ -7,10 +7,10 @@ import { Space } from "../../../../components/ui/Space/Space";
 import { SwipeImage } from "../../../../components/SwipeImage/SwipeImage";
 
 export const ViewProductMobile = ({ data }) => {
+  console.log(data);
   return (
     <div className={s.container}>
-      {/* <img src={data.images[0]} alt='' className={s.productImg} /> */}
-      <SwipeImage images={data.images} />
+      <SwipeImage images={data?.images} />
       <div className={s.containerBlock}>
         <Rating
           size={20}

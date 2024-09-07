@@ -2,7 +2,7 @@ export const ROUTER_NAMES = {
   HOME: "/",
   CATALOG: "/catalog",
   FAVORITES: "/favorites",
-  PERSONAL_AREA: "/personal-area",
+  PERSONAL_AREA: "/profile",
   BASKET: "/basket",
   PRODUCT: "/product",
   CONTACTS: "/contacts",

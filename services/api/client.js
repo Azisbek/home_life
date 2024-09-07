@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const baseURL = "https://home-life.onrender.com/";
+export const baseURL = "https://home-life.onrender.com/";
 // const baseURL = "https://homelife.onrender.com/";
 
 export const clientApi = axios.create({

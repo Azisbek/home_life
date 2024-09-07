@@ -11,7 +11,7 @@ export const ViewProduct = ({ data }) => {
       <h3>Просмотр товара</h3>
       <div className={s.aboutProduct}>
         <div>
-          <SwipeImage images={data.images} />
+          <SwipeImage images={data?.images} />
         </div>
         <div className={s.description}>
           <span>{data.brand.title}</span>

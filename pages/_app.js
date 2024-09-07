@@ -1,10 +1,10 @@
 import { useLayoutEffect, useState } from "react";
+import storeRedux from "../store/store-redux/store";
 import { store } from "../store";
 import AppLayout from "../components/AppLayout/components/AppLayout";
 import "../styles/globals.css";
 import { Loaders } from "../components/ui/Loaders/Loaders";
-
-const MOBILE_WIDTH = 768;
+import { Provider } from "react-redux";
 
 function MyApp({ Component, pageProps }) {
   const { devicesStore } = store;
@@ -37,7 +37,9 @@ function MyApp({ Component, pageProps }) {
 
   return (
     <AppLayout>
-      <Component {...pageProps} />
+      <Provider store={storeRedux}>
+        <Component {...pageProps} />
+      </Provider>
     </AppLayout>
   );
 }
