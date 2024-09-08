@@ -1,0 +1,9 @@
+.bannerHome {
+    width: 50%;
+}
+
+.containerHomeProduct h4 {
+    font-size: 20px;
+    font-weight: 800;
+    margin-bottom: 10px;
+}

@@ -1,0 +1,28 @@
+.homeSelected {
+    width: 25%;
+}
+
+.dropdownMenu {
+    border-bottom: 1px solid grey;
+    padding: 20px 0;
+}
+
+.dropdownMenu h2 {
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 19.5px;
+    width: 197px;
+    cursor: pointer;
+}
+
+.dropdownMenu h2.active {
+    font-weight: 600; 
+  }
+
+.dropdownMenuList li{
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 32px;
+    list-style-type: none;
+    
+}
