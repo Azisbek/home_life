@@ -1,31 +1,19 @@
 import { useState } from "react";
 import Image from "next/image";
 import { AppButton } from "../../../ui/Button/AppButton";
-import { CloseEye } from "../../../assets/icon/close.svg";
-import { OpenEye } from "../../../assets/icon/eye-open.svg";
-import GoogleIcon from "../../../assets/icon/google_icon.svg";
-import { useUserApi } from "../../../../hook/useUserApi";
+import { CloseEye } from "../../../../assets/icon/close.svg";
+import { OpenEye } from "../../../../assets/icon/eye-open.svg";
+import GoogleIcon from "../../../../assets/icon/google_icon.svg";
 import { Input } from "../../../ui/Input/Input";
 
 import s from "./styled.module.css";
+import { useSignUp } from "../../../../hook/useSingUp";
 
 const SignUp = ({ onClose }) => {
+  const [error, setError] = useState("");
   const [show, setShow] = useState(false);
   const [showConfirm, setShowConfirm] = useState(false);
-
-  const { user, error, SignUp, setError } = useUserApi();
-
-  const [form, setForm] = useState({
-    gender: "",
-    age: "",
-    first_name: "",
-    last_name: "",
-    email: "",
-    username: "",
-    number: "",
-    password: "",
-    confirmPassword: "",
-  });
+  const { errorText, form, setForm, onSubmit, singInResponse } = useSignUp();
 
   const clickOpenEyeHandler = () => {
     setShow(!show);
@@ -37,32 +25,24 @@ const SignUp = ({ onClose }) => {
 
   const handleInputChange = (event) => {
     const { name, value } = event.target;
-    setForm({
-      ...form,
+    setForm((prevForm) => ({
+      ...prevForm,
       [name]: value,
-    });
+    }));
   };
 
   const handleSubmit = async (event) => {
     event.preventDefault();
+    // if (form.password !== form.confirmPassword) {
+    //   setError("Пароли не совпадают");
+    //   return;
+    // }
 
-    if (form.password !== form.confirmPassword) {
-      setError("Пароли не совпадают");
-      return;
+    try {
+      await onSubmit();
+    } catch (err) {
+      setError(err.message || "Что-то пошло не так");
     }
-
-    const data = {
-      gender: +form.gender,
-      age: +form.age,
-      first_name: form.first_name,
-      last_name: form.last_name,
-      email: form.email,
-      username: form.username,
-      number: form.number,
-      password: form.password,
-    };
-
-    await SignUp(data);
   };
 
   return (
@@ -79,21 +59,18 @@ const SignUp = ({ onClose }) => {
           onChange={handleInputChange}
           placeholder='Имя*'
         />
-
         <Input
           name='last_name'
           value={form.last_name}
           onChange={handleInputChange}
           placeholder='Фамилия*'
         />
-
         <Input
           name='email'
           value={form.email}
           onChange={handleInputChange}
           placeholder='Электронная почта*'
         />
-
         <Input
           name='username'
           value={form.username}
@@ -106,7 +83,6 @@ const SignUp = ({ onClose }) => {
           onChange={handleInputChange}
           placeholder='Возраст*'
         />
-
         <select
           name='gender'
           value={form.gender}
@@ -117,25 +93,22 @@ const SignUp = ({ onClose }) => {
           <option value='1'>Мужчина</option>
           <option value='2'>Женщина</option>
         </select>
-
         <Input
           name='number'
           value={form.number}
           onChange={handleInputChange}
           placeholder='Номер телефона'
         />
-
         <Input
           name='password'
-          // type={show ? "text" : "password"}
+          type={show ? "text" : "password"}
           value={form.password}
           onChange={handleInputChange}
           placeholder='Введите пароль*'
           rightIcon={show ? CloseEye : OpenEye}
           rightOnClick={clickOpenEyeHandler}
         />
-
-        <Input
+        {/* <Input
           name='confirmPassword'
           type={showConfirm ? "text" : "password"}
           value={form.confirmPassword}
@@ -143,19 +116,17 @@ const SignUp = ({ onClose }) => {
           placeholder='Подтвердите пароль*'
           rightIcon={showConfirm ? CloseEye : OpenEye}
           rightOnClick={clickOpenEyeConfirmHandler}
-        />
-
+        /> */}
         <AppButton className={s.googleBtn} variant='whiteBtn' onClick={onClose}>
           <Image src={GoogleIcon} alt='googleIcon' /> Войти с помощью Google
         </AppButton>
-        {error && <p>{error}</p>}
         <AppButton variant='button' type='submit'>
           Регистрация
         </AppButton>
-
         <AppButton variant='whiteBtn' onClick={onClose}>
           Назад
         </AppButton>
+        {error && <p className={s.error}>{error}</p>}
       </form>
     </div>
   );

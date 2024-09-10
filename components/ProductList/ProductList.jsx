@@ -6,17 +6,9 @@ import { generateProductSkeletons } from "../../utils/generateProductSkeleton";
 import s from "./ProductList.module.css";
 import { observer } from "mobx-react-lite";
 
-export const ProductList = observer(({ data }) => {
+export const ProductList = observer(({ data, loading }) => {
   const { devicesStore } = store;
   const { isMobile } = devicesStore;
-  const [loading, setLoading] = useState(true);
-
-  useEffect(() => {
-    const timer = setTimeout(() => {
-      setLoading(false);
-    }, 2000);
-    return () => clearTimeout(timer);
-  }, []);
 
   return (
     <div className={isMobile ? s.containerProductMobile : s.containerProduct}>
@@ -31,7 +23,7 @@ export const ProductList = observer(({ data }) => {
             ))
         : loading
         ? generateProductSkeletons(8)
-        : data.map((product, index) => (
+        : data?.map((product, index) => (
             <ProductItem data={product} key={`${index} ${product.title}`} />
           ))}
     </div>

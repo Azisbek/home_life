@@ -36,11 +36,11 @@ function MyApp({ Component, pageProps }) {
   }
 
   return (
-    <AppLayout>
-      <Provider store={storeRedux}>
+    <Provider store={storeRedux}>
+      <AppLayout>
         <Component {...pageProps} />
-      </Provider>
-    </AppLayout>
+      </AppLayout>
+    </Provider>
   );
 }
 

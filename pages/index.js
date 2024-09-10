@@ -1,24 +1,24 @@
+import { useEffect } from "react";
 import HomePage from "../pageLayout/MainPage";
-import { MainPageApi } from "../services/api/MainPageApi";
+import { useGetMainPageQuery } from "../pageLayout/MainPage/api";
+import { meLoader } from "../store/lib/meLoader";
 
-const Home = ({ mainData }) => {
-  return <HomePage mainData={mainData.homepage} />;
+const Home = () => {
+  const { data, isLoading, isError } = useGetMainPageQuery();
+
+  useEffect(() => {
+    const loadData = async () => {
+      try {
+        await meLoader();
+      } catch (error) {
+        console.error("Error loading data:", error);
+      }
+    };
+
+    loadData();
+  }, []);
+
+  return <HomePage isLoading={isLoading} mainData={data?.homepage} />;
 };
+
 export default Home;
-
-export const getServerSideProps = async () => {
-  try {
-    const { data } = await MainPageApi.getMainPage();
-    return {
-      props: {
-        mainData: data,
-      },
-    };
-  } catch (error) {
-    return {
-      props: {
-        mainData: "error",
-      },
-    };
-  }
-};

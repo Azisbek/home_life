@@ -1,3 +1,1 @@
-import SignIn from "./components/SignIn";
-
-export { SignIn };
+export { SignIn } from "./components/SignIn";

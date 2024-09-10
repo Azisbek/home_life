@@ -1,18 +1,36 @@
-import { createApi, fetchBaseQuery } from "@reduxjs/toolkit/query";
-import { baseURL } from "../../../services/api/client";
+import { apiSlice } from "../../../store/api";
 
-export const accountApi = createApi({
-  reducerPath: "account",
-  baseQuery: fetchBaseQuery({ baseUrl: baseURL }),
-  endpoints: (builder) => ({
-    signUp: builder.mutation({
-      query: (user) => ({
+export const accountApi = apiSlice.injectEndpoints({
+  endpoints: (build) => ({
+    signUp: build.mutation({
+      query: (data) => ({
         url: "/users/register/",
         method: "POST",
-        body: user,
+        body: data,
+      }),
+    }),
+    signIn: build.mutation({
+      query: (data) => ({
+        url: "/users/login/",
+        method: "POST",
+        body: data,
+      }),
+    }),
+    getMe: build.mutation({
+      query: () => ({
+        url: "/users/me/",
+        method: "GET",
+      }),
+    }),
+    refresh: build.mutation({
+      query: (body) => ({
+        url: "/users/logout/",
+        method: "POST",
+        body,
       }),
     }),
   }),
 });
 
-export const { useSignUp } = accountApi;
+export const { useSignUpMutation, useSignInMutation, useGetMeMutation } =
+  accountApi;

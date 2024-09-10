@@ -4,21 +4,16 @@ import { AppButton } from "../../../ui/Button/AppButton";
 import { CloseEye } from "../../../../assets/icon/close.svg";
 import { OpenEye } from "../../../../assets/icon/eye-open.svg";
 import GoogleIcon from "../../../../assets/icon/google_icon.svg";
-import { useUserApi } from "../../../../hook/useUserApi";
 import { Input } from "../../../ui/Input/Input";
 
 import s from "./SignIn.module.css";
+import { useSignIn } from "../../../../hook/useSignIn";
 
-const SignUp = ({ onClose }) => {
+export const SignIn = ({ onClose }) => {
+  const [error, setError] = useState("");
   const [show, setShow] = useState(false);
   const [showConfirm, setShowConfirm] = useState(false);
-
-  const { user, error, SignIn, setError } = useUserApi();
-
-  const [form, setForm] = useState({
-    email: "",
-    password: "",
-  });
+  const { errorText, form, setForm, onSubmit, signInResponse } = useSignIn();
 
   const clickOpenEyeHandler = () => {
     setShow(!show);
@@ -38,18 +33,16 @@ const SignUp = ({ onClose }) => {
 
   const handleSubmit = async (event) => {
     event.preventDefault();
+    // if (form.password !) {
+    //   setError("Пароли не совпадают");
+    //   return;
+    // }
 
-    if (form.password !== form.confirmPassword) {
-      setError("Пароли не совпадают");
-      return;
+    try {
+      await onSubmit();
+    } catch (err) {
+      setError(err.message || "Что-то пошло не так");
     }
-
-    const data = {
-      email: form.email,
-      password: form.password,
-    };
-
-    await SignIn(data);
   };
 
   return (
@@ -77,20 +70,9 @@ const SignUp = ({ onClose }) => {
           rightOnClick={clickOpenEyeHandler}
         />
 
-        <Input
-          name='confirmPassword'
-          type={showConfirm ? "text" : "password"}
-          value={form.confirmPassword}
-          onChange={handleInputChange}
-          placeholder='Подтвердите пароль*'
-          rightIcon={showConfirm ? CloseEye : OpenEye}
-          rightOnClick={clickOpenEyeConfirmHandler}
-        />
-
         <AppButton className={s.googleBtn} variant='whiteBtn' onClick={onClose}>
           <Image src={GoogleIcon} alt='googleIcon' /> Войти с помощью Google
         </AppButton>
-        {error && <p>{error}</p>}
         <AppButton variant='button' type='submit'>
           Login
         </AppButton>
@@ -102,5 +84,3 @@ const SignUp = ({ onClose }) => {
     </div>
   );
 };
-
-export default SignUp;
