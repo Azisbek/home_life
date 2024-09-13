@@ -1,0 +1,103 @@
+.requestForms h1 {
+    font-size: 28px;
+    font-weight: 600;
+
+}
+
+.requestFormContent {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 0;
+}
+
+.requestFormContentForm {
+    display: flex;
+    width: 70%;
+    flex-direction: column;
+    gap: 10px;
+    gap: 30px;
+}
+
+.requestFormContentForm input {
+    width: 100%;
+    height: 45px;
+    padding: 13px 20px;
+    border-radius: 12px;
+    outline: none;
+    border: 1px solid grey;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.requestFormContentForm h3 {
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.requestFormContentForm label {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.requestFormContentForm label input {
+    width: 24px;
+    height: 24px;
+}
+
+.requestFormContentSumm {
+    border: 0.5px solid rgba(210, 210, 209, 1);
+    padding: 20px 20px 32px 20px;
+    width: 305px;
+    height: 300px;
+}
+
+.requestFormContentSumm h2 {
+    margin-bottom: 21px;
+    font-size: 26px;
+    font-weight: 500;
+}
+
+.requestFormContentSumm p {
+    font-size: 14px;
+    margin-bottom: 20px;
+    font-weight: 400;
+    line-height: 17.07px;
+}
+
+.requestFormContentTotal {
+    display: flex;
+    align-items: center;
+    padding: 20px 0 30px 0;
+    border-top: 0.5px solid rgba(210, 210, 209, 1);
+    justify-content: space-between;
+}
+
+.requestFormContentTotal h3 {
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.requestFormContentSumm button {
+    height: 45px;
+    width: 100%;
+    background: rgba(250, 213, 73, 1);
+    font-size: 12px;
+    outline: none;
+    border: none;
+    font-weight: 400;
+}
+
+@media (max-width: 1340px) {
+    .requestFormContentForm {
+        width: 60%;
+    }
+}
+
+@media (max-width: 980px) {
+    .requestFormContentForm {
+        width: 45%;
+    }
+}
