@@ -1,19 +1,20 @@
 import { ProductId } from "../../../pageLayout/ProductId";
 import { ProductIdApi } from "../../../services/api/ProductIdApi";
 
-const ProductDetail = ({ catalogData }) => {
-  return <ProductId catalogData={catalogData} />;
+const ProductDetail = ({ catalogData, id }) => {
+  return <ProductId catalogData={catalogData} id={id} />;
 };
 
 export default ProductDetail;
 
 export const getServerSideProps = async (context) => {
-  const id = context.params;
+  const { id } = context.params;
   try {
-    const { data } = await ProductIdApi.getMainPage(id);
+    const { data } = await ProductIdApi.getProductIdPage(id);
     return {
       props: {
         catalogData: data,
+        id,
       },
     };
   } catch (error) {

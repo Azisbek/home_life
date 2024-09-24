@@ -1,16 +1,31 @@
+@media screen and (max-width:1006px ) {
+  .containerBlock{
+    display: flex;
+    flex-direction:column-reverse;
+  }
+}
+
 .title {
+  
   font-weight: 600;
   font-size: 28px;
   line-height: 34px;
-  margin-bottom: 30px;
 }
 
 .containerList {
   margin-bottom: 90px;
 }
 
+.productList{
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
 .containerBlock {
   display: flex;
+  justify-content: space-between;
   column-gap: 10px;
-  flex-wrap: wrap-reverse;
+  flex-wrap: wrap;
+  align-items: flex-start;
 }

@@ -7,7 +7,7 @@ export const Counter = () => {
     setAdd((prev) => prev + 1);
   };
   const handleMinuse = () => {
-    setAdd((prev) => prev - 1);
+    setAdd((prev) => (prev > 1 ? prev -1 : 1)); 
   };
   return (
     <div className={s.contain}>
@@ -21,3 +21,4 @@ export const Counter = () => {
     </div>
   );
 };
+  

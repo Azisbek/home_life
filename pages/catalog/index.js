@@ -6,7 +6,7 @@ const Catalog = ({ catalogData }) => {
 };
 export default Catalog;
 
-export const getServerSideProps = async () => {
+export const getServerSideProps = async (ctx) => {
   try {
     const { data } = await CatalogPageApi.getCatalogPage();
     return {

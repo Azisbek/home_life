@@ -1,4 +1,9 @@
- 
+@media screen and (max-width: 720px){
+  .number{
+    width: 30px;
+    height: 18px;
+  }
+}
 
 .contain {
   display: flex;
@@ -9,7 +14,12 @@
 
 .number {
   background: rgb(210, 210, 209);
-  padding: 5px 30px 5px 30px;
+  width: 60px;
+  height: 34px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .add {

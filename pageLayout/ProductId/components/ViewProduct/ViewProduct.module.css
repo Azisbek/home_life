@@ -3,7 +3,6 @@
   flex-wrap: wrap;
   column-gap: 94px;
 }
-
 .container h3 {
   color: rgb(29, 29, 26);
   font-size: 28px;
@@ -11,53 +10,33 @@
   line-height: 34px;
   padding-bottom: 30px;
 }
-
-.cleaner {
-  width: 275px;
-  height: 394px;
+.productImg {
+  width: 326px;
+  height: 359px;
+  /* object-fit: cover; */
 }
-
-.descriptionCleaner {
+.description {
   display: flex;
-  flex-direction: column;  
-  margin-bottom: 90px;
+  flex-direction: column;
 }
-
-.col {
-  padding-top: 30px;
+.colorText {
+  padding-top: 20px;
 }
-
-.descriptionCleaner p {
-  color: rgb(29, 29, 26);
-  font-size: 24px;
-  font-weight: 600;
-  line-height: 29px;
-}
-
-.descriptionCleaner span {
+.description span {
   color: rgb(29, 29, 26);
   font-size: 20px;
   font-weight: 600;
   line-height: 24px;
 }
-
 .button {
-  background-color: rgb(250, 213, 73);
-  padding: 12px 0;
-  border: none;
-  border-radius: 5px;
-  font-size: 14px;
-  font-weight: 500;
-  line-height: 19px;
-  margin-top: 40px;
-  max-width: 264px;
-  max-height: 45px;
-  cursor: pointer;
+  margin-top: 10px;
+  padding: 10px;
 }
-
 .color {
   display: flex;
   gap: 10px;
+  margin-bottom: 10px;
+  margin-top: 5px;
 }
 
 .color1 {
@@ -65,13 +44,10 @@
   background-color: rgb(155, 159, 160);
   width: 29px;
   height: 29px;
-  margin: 10px 0px 30px 0px;
 }
-
 .color2 {
   border-radius: 50%;
   background-color: rgb(0, 0, 0);
   width: 29px;
   height: 29px;
-  margin: 10px 0px 30px 0px;
 }
